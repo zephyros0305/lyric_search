@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from lyric_crawler import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'', views.index, name='index'),
+
 ]

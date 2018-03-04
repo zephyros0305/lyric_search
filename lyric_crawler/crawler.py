@@ -21,7 +21,7 @@ def search_song(song_name):
         song_list.append({
             'name':name_temp[1],
             'singer':song.find('span', 'mxsh_ss2').getText(),
-            'ablum':song.find('span', 'mxsh_ss3').getText(),
+            'album':song.find('span', 'mxsh_ss3').getText(),
             'link':meta.get('href'),
             })
 
@@ -47,5 +47,3 @@ def get_lyric(url):
         lyric_list.append(string)
 
     return lyric_list
-
-print(get_lyric('/twy100256x23x13.htm'))
