@@ -8,7 +8,7 @@
   現在免強算是半成品，因為實在是太過簡潔XD!?
 
   不過我也不一定會再修改它，哈哈
-  
+
   喜歡都可以pull request~
   
   ![search](https://github.com/zephyros0305/lyric_search/raw/master/readme/search.jpg)
@@ -17,7 +17,7 @@
 
   ![result](https://github.com/zephyros0305/lyric_search/raw/master/readme/result.jpg)
 
-  搜尋結果顯示。
+  搜尋結果顯示，點擊要找的歌曲資訊即可進入歌詞頁面。
 
   ![lyric](https://github.com/zephyros0305/lyric_search/raw/master/readme/lyric.jpg)
 
