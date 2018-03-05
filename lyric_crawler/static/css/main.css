@@ -1,4 +1,7 @@
-.center{
+.top_margin{
+    margin-top: 6%;
+}
+.text_center{
     margin: auto;
     text-align: center;
 }

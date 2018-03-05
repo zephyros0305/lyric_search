@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Lyric Search</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-</head>
-<body>
-    <div class="container">
-        <div class="jumbotron center">
-            <h1>搜尋你想要的歌詞！</h1>
-            <form method="GET">
-                {% csrf_token %}
-                <input type="text" class="search_bar" placeholder="輸入歌名，如：我難過" name="song">
-                <input type="submit" class="btn btn-default" value="搜尋">
-            </form>
-        </div>
+{% extends "lyric_crawler/base.html" %}
+{% block body_block %}
+    <div class="jumbotron text_center">
+    <h1>搜尋你想要的歌詞！</h1>
+        <form method="GET">
+            {% csrf_token %}
+            <input type="text" class="search_bar" placeholder="輸入歌名，如：我難過" name="song">
+            <input type="submit" class="btn btn-default" value="搜尋">
+        </form>
     </div>
-</body>
-</html>
+{% endblock %}
