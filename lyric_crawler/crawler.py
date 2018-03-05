@@ -32,9 +32,6 @@ def get_lyric(url):
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'lxml')
     lyric = soup.find('dl', 'fsZx1')
-    singer = lyric.getText()
-    song = lyric.find('dt', 'fsZx2').getText()
-    ly = lyric.find('dd', 'fsZx3').getText()
 
     a = re.compile('^\[\d+')
 
@@ -46,4 +43,12 @@ def get_lyric(url):
             break
         lyric_list.append(string)
 
-    return lyric_list
+    singer = lyric_list.pop(0)
+    name = lyric_list.pop(0)
+
+    song_detail = {
+        'singer':singer,
+        'name':name,
+        'lyric':lyric_list,
+    }
+    return song_detail
